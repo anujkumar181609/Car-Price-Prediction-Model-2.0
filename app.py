@@ -81,10 +81,13 @@ Predict the resale value of used cars using machine learning.
 
 
 # importing dataset
-df=pd.read_csv('clean_car_price_data.csv')
+BASE_DIR = Path(__file__).resolve().parent
+csv_path = BASE_DIR / "clean_car_price_data.csv"
+df = pd.read_csv(csv_path)
 
 # importing model
-model= joblib.load('car_price_rf_model.pkl')
+model_path = BASE_DIR / "car_price_rf_model.pkl"
+model= joblib.load(open(model_path, 'rb))
 
 #heading and subheading
 st.markdown('<div class="title-text">🚗 Car Price Prediction Model</div>', unsafe_allow_html=True)
