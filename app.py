@@ -87,7 +87,7 @@ df = pd.read_csv(csv_path)
 
 # importing model
 model_path = BASE_DIR / "car_price_rf_model.pkl"
-model= joblib.load(open(model_path, 'rb))
+model= joblib.load(open(model_path, 'rb'))
 
 #heading and subheading
 st.markdown('<div class="title-text">🚗 Car Price Prediction Model</div>', unsafe_allow_html=True)
